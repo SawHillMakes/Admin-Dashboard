@@ -1,9 +1,16 @@
+@font-face {
+    font-family: 'PricedownBl-Regular';
+    font-style: normal;
+    font-weight: normal;
+    src:url('./assets/pricedown-webfont/pricedown\ bl.woff') format('woff');
+    }
+
 html, body
 {
     padding: 0px;
     margin: 0px;
-    background-color: gray;
     overflow: hidden;
+    background-color: #2A2A2A;
 }
 
 .gridContainer
@@ -13,14 +20,46 @@ html, body
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 2fr 9fr;
 }
+
+.announcementsHeader, .trendingHeader
+{
+    font-family: 'PricedownBl-Regular';
+    color: rgb(22, 20, 20);
+}
+
+button {
+    font-family: 'DIN Condensed', Arial, sans-serif;
+    background: #111;
+    color: #eee;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: transform 0.2s ease;
+  }
+  
+  button:hover {
+    background: #5fabf7;
+    color: white;
+    transform: scale(1.2);
+  }
+
+  li:hover
+  {
+    transform: scale(1.08);
+  }
+
 /* header starts here */
 
 .header
 {
-    background-color: lightblue;
     grid-area: 1 / 2 / 2 / 3;
     display: grid;
     grid-template-rows: 1fr 2fr;
+    border-left: 2px solid black;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f7ca5f;
 }
 
 .icon
@@ -123,11 +162,15 @@ button
 /* sidebar starts here */
 .sidebar
 {
-    background-color: lightcoral;
     grid-area: 1 / 1 / 3 / 2;
     display: grid;
     grid-template-rows: 1fr 6fr 3fr 3fr;
+    background-color: rgb(84, 169, 240);
+    font-family: 'PricedownBl-Regular', sans-serif;
+    text-shadow: 0 0 1px white;
+    color: black;
 }
+
 
 ul
 {
@@ -145,6 +188,7 @@ li
     align-items: center;
     gap: 20px;
     padding-bottom: 20px;
+    transition: transform 0.2s ease;
 }
 
 li img
@@ -176,11 +220,12 @@ h1
 /* main starts here */
 .main
 {
-    background-color: brown;
+    background-color: white;
     grid-area: 2 / 2 / 3 / 3;
     display: grid;
     grid-template-columns: 7fr 3fr;
     overflow: auto;
+    border: 2px solid black;
 }
 
 .articleContainer
@@ -193,14 +238,22 @@ h1
 
 .articleDiv
 {
-    background-color: whitesmoke;
+    background-color: white;
     padding: 20px;
     width: 40%;
     height: 20%;
-    border-radius: 17px;
+    border-radius: 12px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border-left: 10px solid #f7ca5f;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.349);
+}
+
+article
+{
+    font-size: 1.2rem;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
 .articleContainer h3
@@ -222,6 +275,8 @@ h1
     font-size: 2em;
     font-weight: 600;
     align-items: end;
+    font-family: 'PricedownBl-Regular', sans-serif;
+    color: black;
 }
 
 .spaceBetween
@@ -237,8 +292,9 @@ h1
 {
     display: flex;
     flex-direction: column;
-    gap: 5em;
+    gap: 3em;
     padding: 20px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
 .announcementsHeader
@@ -258,6 +314,7 @@ h1
 {
     background-color: white;
     border-radius: 15px;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.349);
 }
 
 .announcements ul
@@ -298,6 +355,7 @@ span
     padding: 25px;
     background-color: white;
     border-radius: 15px;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.349);
 }
 
 ul h3
